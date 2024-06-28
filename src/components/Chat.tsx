@@ -18,10 +18,10 @@ export function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <Card className='w-[550px]'>
+    <Card className='w-[550px] shadow-md shadow-slate-700' >
       <CardHeader>
         <CardTitle>Chat Bot</CardTitle>
-        <CardDescription>Chat bot with varcel.</CardDescription>
+        <CardDescription>Chat bot criado com varcel, usando api da openai.</CardDescription>
       </CardHeader>
 
       <CardContent>
