@@ -18,19 +18,21 @@ export function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <Card className='w-[550px] shadow-md shadow-slate-700' >
+    <Card className='w-[550px] shadow-md shadow-slate-700'>
       <CardHeader>
         <CardTitle>Chat Bot</CardTitle>
-        <CardDescription>Chat bot criado com varcel, usando api da openai.</CardDescription>
+        <CardDescription>
+          Chat bot criado com varcel, usando api da openai.
+        </CardDescription>
       </CardHeader>
 
       <CardContent>
-        <ScrollArea className='h-[400px] w-full space-y-4 '>
+        <ScrollArea className='h-[400px] w-full pr-4 '>
           {messages.map((message) => {
             return (
               <div
                 key={message.id}
-                className='flex gap-3 text-slate-600 text-sm '
+                className='flex gap-3 text-slate-600 text-sm mb-4  '
               >
                 {message.role === 'user' && (
                   <Avatar>
@@ -54,6 +56,7 @@ export function Chat() {
               </div>
             );
           })}
+
         </ScrollArea>
       </CardContent>
 
