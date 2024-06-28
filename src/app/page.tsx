@@ -6,30 +6,28 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
 export default function Home() {
   return (
     <div className='flex min-h-screen bg-slate-200 items-center justify-center'>
-      <Card className='bg-slate-50 shadow-md shadow-slate-700 w-[400px] h-[500px] grid grid-rows-[min-content_1fr_min-content] '>
-        <CardHeader>
-          <CardTitle>Chatbot</CardTitle>
-          <CardDescription>Chat bot with Vercel SDK</CardDescription>
-        </CardHeader>
-        <CardContent className='space-y-4'>
-          <div className='flex gap-4 text-slate-600 text-sm'>
+      <Card className='w-[400px] h-[500px] grid grid-rows-[min-content_1fr_min-content] shadow-md shadow-slate-800 '>
+        <CardHeader>Chat Bot</CardHeader>
+        <CardDescription>Chat bot with varcel.</CardDescription>
+
+        <CardContent className='space-y-3'>
+          <div>
             <Avatar>
               <AvatarFallback>CS</AvatarFallback>
-              <AvatarImage src='https://github.com/CeciliuSousa.png'></AvatarImage>
+              <AvatarImage src='http://github.com/CeciliuSousa.png'></AvatarImage>
             </Avatar>
           </div>
-          <div></div>
         </CardContent>
-        <CardFooter className='space-x-3'>
-          <Input placeholder='How can I Help you?' />
-          <Button variant='secondary' >Send</Button>
+
+        <CardFooter className='space-y-3'>
+          <Input placeholder='Em que posso lhe ajudar?'></Input>
+          <Button type='submit'>Send</Button>
         </CardFooter>
       </Card>
     </div>
